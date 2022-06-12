@@ -25,7 +25,7 @@ while url:  #when url is none, i.e, when page ends, the while loop stops as we h
         next_button = soup.find(class_="next")   # Can Also do this combined --> soup.find(class_="next").find("a")["href"]
         url = next_button.find("a")["href"] if next_button else None  #Check if next_button class exists if exists then execute the same line code. ie., Give me the page link, if it doesnt exists then do nothing. (None)
         # print(url)
-        # sleep(1)  #sleep for 1 second after every loop/request so that we dont overload the server.
+        sleep(1)  #sleep for 1 second after every loop/request so that we dont overload the server.
         all_quotes.append([quote_text_form, author, bio_link])
 print(all_quotes)
 
